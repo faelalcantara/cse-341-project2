@@ -16,7 +16,7 @@
         "tags": [
           "Cars"
         ],
-        "description": "",
+        "description": "Get all cars",
         "produces": [
           "application/json"
         ],
@@ -30,7 +30,7 @@
         "tags": [
           "Cars"
         ],
-        "description": "",
+        "description": "Add new car",
         "parameters": [
           {
             "name": "body",
@@ -78,7 +78,7 @@
         "tags": [
           "Cars"
         ],
-        "description": "",
+        "description": "Get a car by id",
         "produces": [
           "application/json"
         ],
@@ -100,7 +100,7 @@
         "tags": [
           "Cars"
         ],
-        "description": "",
+        "description": "Update a car information",
         "parameters": [
           {
             "name": "id",
@@ -152,7 +152,7 @@
         "tags": [
           "Cars"
         ],
-        "description": "",
+        "description": "Delete a car",
         "parameters": [
           {
             "name": "id",
