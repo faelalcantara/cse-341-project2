@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { body, param, validationResult } = require('express-validator');
 const carsController = require('../controllers/cars');
+const { isAuthenticated } = require('../middleware/authenticate');
 
 // Middleware to validate POST and PUT
 const validateCarData = [
@@ -31,11 +32,11 @@ router.get('/', carsController.getAll);
 
 router.get('/:id', [...validateCarId, handleValidationErrors], carsController.getSingle);
 
-router.post('/', [...validateCarData, handleValidationErrors], carsController.createCar);
+router.post('/', [isAuthenticated, ...validateCarData, handleValidationErrors], carsController.createCar);
 
-router.put('/:id', [...validateCarId, ...validateCarData, handleValidationErrors], carsController.updateCar);
+router.put('/:id', [isAuthenticated, ...validateCarId, ...validateCarData, handleValidationErrors], carsController.updateCar);
 
-router.delete('/:id', [...validateCarId, handleValidationErrors], carsController.deleteCar);
+router.delete('/:id', [isAuthenticated, ...validateCarId, handleValidationErrors], carsController.deleteCar);
 
 
 module.exports = router;
