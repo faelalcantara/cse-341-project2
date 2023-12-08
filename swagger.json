@@ -11,42 +11,12 @@
     "https"
   ],
   "paths": {
-    "/login": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/logout": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/cars/": {
       "get": {
         "tags": [
           "Cars"
         ],
-        "description": "",
+        "description": "Get all cars",
         "produces": [
           "application/json"
         ],
@@ -60,7 +30,7 @@
         "tags": [
           "Cars"
         ],
-        "description": "",
+        "description": "Add car",
         "parameters": [
           {
             "name": "body",
@@ -114,7 +84,7 @@
         "tags": [
           "Cars"
         ],
-        "description": "",
+        "description": "Get car by id",
         "produces": [
           "application/json"
         ],
@@ -139,7 +109,7 @@
         "tags": [
           "Cars"
         ],
-        "description": "",
+        "description": "Update car",
         "parameters": [
           {
             "name": "id",
@@ -197,7 +167,7 @@
         "tags": [
           "Cars"
         ],
-        "description": "",
+        "description": "Delete car",
         "parameters": [
           {
             "name": "id",
